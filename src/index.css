@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* @apply bg-gray-200; */
+  }
+
+  .stroke {
+    border: 1px solid red;
+  }
+
+  .landing-screen-height {
+    min-height: calc(100vh - 80px);
+    max-height: 1080px;
+  }
+}
+
+@layer utilities {
+  .toggle-menu {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::before]:bg-white [&>div::after]:bg-white [&>div::before]:w-7 [&>div::after]:w-7 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-180;
+  }
+  .menu-open {
+    @apply absolute gap-5 right-0 top-0 -mr-2 pl-4 pr-8 pt-28 w-2/3 max-w-xs h-screen bg-darkBlue text-white;
+  }
+}
