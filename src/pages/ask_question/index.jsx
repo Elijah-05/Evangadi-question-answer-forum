@@ -17,7 +17,6 @@ const AskQuestion = () => {
     questionDescription: "",
   });
   const [error, setError] = useState();
-  const addToast = useToasts();
 
   const navigate = useNavigate();
 
